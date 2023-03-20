@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-image: url(https://cunning-narwhal-nuuwt8-dev-ed--c.trailblaze.vf.force.com/resource/1678040546000/pizza_bg);
+    background-size: cover;
+    background-position: center;
+}
+
+label {
+    color: white;
+}
+
+div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    gap: 0.2rem;
+}
+
+input {
+    padding: 0.8rem;
+}
+
+select {
+    padding: 0.8rem;
+}
+
+button {
+    padding: 0.8rem;
+    color: white;
+    background-color: orangered;
+}
+
+button:hover {
+    background-color: green;
+    color: white;
+}

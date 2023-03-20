@@ -1,0 +1,68 @@
+<!-- sldsValidatorIgnore -->
+<template>    
+    <form>
+        <div>
+            <template if:true={accounts.data}>
+                <label for="account">Account</label>  
+                <select name="account" onchange={handleAccountChange}>
+                    <template for:each={accounts.data} for:item="account">
+                        <option key={account.Id} value={account.Id} > {account.Name} </option>
+                    </template> 
+                </select>
+            </template>
+        </div>
+        <div>
+            <label for="pizza">Pizza</label>
+            <select name="pizza" onchange={handlePizzaChange}>
+                <option value="Margherita Pizza">Margherita Pizza</option>
+                <option value="Cheese n Corn Pizza">Cheese n Corn Pizza</option>
+                <option value="Cheese n Tomato Pizza">Cheese n Tomato Pizza</option>
+                <option value="Double Cheese Margherita Pizza">Double Cheese Margherita Pizza</option>
+                <option value="Fresh Veggie Pizza">Fresh Veggie Pizza</option>
+                <option value="Farmhouse Pizza">Farmhouse Pizza</option>
+                <option value="Peppy Paneer Pizza">Peppy Paneer Pizza</option>
+                <option value="Veggie Paradise Pizza">Veggie Paradise Pizza</option>
+                <option value="Veg Extravaganza Pizza">Veg Extravaganza Pizza</option>
+                <option value="Cheese Dominator Pizza">Cheese Dominator Pizza</option>
+            </select>
+        </div>
+        <div>
+            <label for="size">Size</label>
+            <select name="size" onchange={handleSizeChange}>
+                <option value="Regular">Regular</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+        </div>
+        <div>
+            <label for="Toppings">Toppings</label>
+            <select name="Toppings" onchange={handleToppingsChange}>
+                <option value="No Toppings">No Toppings</option>
+                <option value="Black Olives">Black Olives</option>
+                <option value="Crisp Capsicum">Crisp Capsicum</option>
+                <option value="Paneer">Paneer</option>
+                <option value="Mozzarella">Mozzarella</option>
+                <option value="Pecorino">Pecorino</option>
+                <option value="Parmesan">Parmesan</option>
+            </select>
+        </div>
+        <div>
+            <label for="coupon">Coupon</label>
+            <select name="coupon" onchange={handleCouponChange}>
+                <option value="NIL">No Coupon</option>
+                <option value="DIS-005">DIS-005</option>
+                <option value="OFF-010">OFF-010</option>
+                <option value="FRE-000">FRE-000</option>
+            </select>
+        </div>
+        <div>
+            <label for="quantity">Quantity</label>
+            <input type="number" placeholder="quantity" value="1" onchange={handleQuantityChange}>
+        </div>
+        <div>
+            <label for="total">Total</label>
+            <input type="text" value={price} disabled />
+        </div>
+        <button type="button" onclick={handleOrder}>Order</button>
+    </form>
+</template>
